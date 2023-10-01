@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://byq256acjt55l"]
+
+[ext_resource type="Script" path="res://UI/game_over.gd" id="1_3kl0u"]
+[ext_resource type="FontFile" uid="uid://cqf1rox1af8ha" path="res://Assets/Bombing.ttf" id="1_trcr0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iergj"]
+font = ExtResource("1_trcr0")
+font_size = 150
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_3kl0u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_iergj")
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_trcr0")
+theme_override_font_sizes/font_size = 50
+text = "Retry"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0lw3tbl5dnk7"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_i2a5l"]
+[ext_resource type="Texture2D" uid="uid://dlam3ne013ji6" path="res://Assets/sprites.png" id="1_o42ws"]
+[ext_resource type="Script" path="res://Player/Radar.gd" id="3_bg6td"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fns6u"]
+radius = 53.0094
+
+[node name="Player" type="RigidBody2D" groups=["player"]]
+inertia = 1.0
+gravity_scale = 0.0
+script = ExtResource("1_i2a5l")
+baseSpeed = 100
+baseRotate = 500
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -6)
+texture = ExtResource("1_o42ws")
+region_enabled = true
+region_rect = Rect2(256, 0, 128, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fns6u")
+
+[node name="Parts" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Enemy Radar" type="Node2D" parent="."]
+visible = false
+script = ExtResource("3_bg6td")
+group = "enemy"
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy Radar"]
+modulate = Color(0.545098, 0, 0, 1)
+position = Vector2(0, -339)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_o42ws")
+region_enabled = true
+region_rect = Rect2(0, 256, 128, 128)
+
+[node name="Part Radar" type="Node2D" parent="."]
+visible = false
+script = ExtResource("3_bg6td")
+group = "part"
+
+[node name="Sprite2D" type="Sprite2D" parent="Part Radar"]
+modulate = Color(0.717647, 0.603922, 0, 1)
+position = Vector2(0, -339)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_o42ws")
+region_enabled = true
+region_rect = Rect2(0, 256, 128, 128)

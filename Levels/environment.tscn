@@ -1,0 +1,358 @@
+[gd_scene load_steps=2 format=3 uid="uid://clmhvyw1p74o8"]
+
+[ext_resource type="Texture2D" uid="uid://nv7vf51t84e0" path="res://Assets/background.png" id="1_xcuox"]
+
+[node name="Environment" type="Node2D"]
+
+[node name="Border2" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border2/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-3584, 3584, 3584, 3584, 3584, -3584, -3584, -3584, -3584, 3584)
+
+[node name="Stars" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Stars2" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(0, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars3" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars4" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars5" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars6" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars7" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars8" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, 512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars9" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars10" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, 0)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars11" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, 0)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars12" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, 0)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars13" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, 0)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars14" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, 0)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars15" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, 0)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars16" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(0, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars17" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars18" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars19" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars20" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars21" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars22" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, -512)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars23" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(0, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars24" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars25" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars26" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars27" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars28" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars29" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, -1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars30" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(0, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars31" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars32" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars33" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars34" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars35" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars36" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, 1024)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars37" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(0, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars38" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars39" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars40" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars63" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(0, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars64" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(512, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars65" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1024, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars66" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(1536, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars67" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars68" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars69" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, -1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars41" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-512, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars42" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1024, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="Stars43" type="Sprite2D" parent="Stars"]
+texture_repeat = 2
+position = Vector2(-1536, 1536)
+texture = ExtResource("1_xcuox")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)

@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfcasw084alw7"]
+
+[ext_resource type="Script" path="res://Levels/Level.gd" id="1_1m3wk"]
+[ext_resource type="PackedScene" uid="uid://k5f0bs7jrrsk" path="res://Player/Parts/thruster.tscn" id="2_3snsd"]
+[ext_resource type="PackedScene" uid="uid://clmhvyw1p74o8" path="res://Levels/environment.tscn" id="3_3boxs"]
+[ext_resource type="PackedScene" uid="uid://d0lw3tbl5dnk7" path="res://Player/Player.tscn" id="4_o3t85"]
+[ext_resource type="PackedScene" uid="uid://32u71t15ojok" path="res://UI/notice.tscn" id="5_l7f7c"]
+[ext_resource type="PackedScene" uid="uid://c1uouxvci1cs2" path="res://Player/Parts/laser_blaster.tscn" id="6_bof0q"]
+[ext_resource type="PackedScene" uid="uid://c0wn4vybnqpn8" path="res://UI/wave_intro.tscn" id="8_avp5c"]
+[ext_resource type="PackedScene" uid="uid://byq256acjt55l" path="res://UI/game_over.tscn" id="8_sjvm8"]
+[ext_resource type="PackedScene" uid="uid://crpp4noxy2wtk" path="res://UI/ui.tscn" id="9_wbg2t"]
+[ext_resource type="Script" path="res://Levels/Wave.gd" id="10_iry33"]
+[ext_resource type="PackedScene" uid="uid://b21ga657vm8nl" path="res://UI/start.tscn" id="11_2l75o"]
+[ext_resource type="PackedScene" uid="uid://qhfpwsm1kwvk" path="res://UI/win.tscn" id="11_57o6o"]
+
+[node name="Level1" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_1m3wk")
+
+[node name="Waves" type="Node" parent="."]
+
+[node name="Wave1" type="Node" parent="Waves"]
+script = ExtResource("10_iry33")
+introduction = "Hold onto your butts"
+fast = 10
+
+[node name="World" type="Node" parent="."]
+
+[node name="Environment" parent="World" instance=ExtResource("3_3boxs")]
+
+[node name="Spawners" type="Node" parent="World"]
+
+[node name="SpawnLocation1" type="Node2D" parent="World/Spawners"]
+position = Vector2(-3185, -3336)
+
+[node name="SpawnLocation2" type="Node2D" parent="World/Spawners"]
+position = Vector2(10, -3355)
+
+[node name="SpawnLocation3" type="Node2D" parent="World/Spawners"]
+position = Vector2(3125, -3325)
+
+[node name="SpawnLocation4" type="Node2D" parent="World/Spawners"]
+position = Vector2(3249, 13)
+
+[node name="SpawnLocation5" type="Node2D" parent="World/Spawners"]
+position = Vector2(3226, 3260)
+
+[node name="SpawnLocation6" type="Node2D" parent="World/Spawners"]
+position = Vector2(-66, 3271)
+
+[node name="SpawnLocation7" type="Node2D" parent="World/Spawners"]
+position = Vector2(-3211, 3282)
+
+[node name="SpawnLocation8" type="Node2D" parent="World/Spawners"]
+position = Vector2(-3335, 69)
+
+[node name="Enemies" type="Node" parent="World"]
+
+[node name="Player" parent="World" instance=ExtResource("4_o3t85")]
+
+[node name="InitialParts" type="Node" parent="World"]
+
+[node name="Thruster" parent="World/InitialParts" instance=ExtResource("2_3snsd")]
+position = Vector2(100, 100)
+rotation = 0.0170223
+
+[node name="Blaster" parent="World/InitialParts" instance=ExtResource("6_bof0q")]
+position = Vector2(-14, 138)
+
+[node name="Notice" parent="." instance=ExtResource("5_l7f7c")]
+
+[node name="WaveIntro" parent="." instance=ExtResource("8_avp5c")]
+
+[node name="GameOver" parent="." instance=ExtResource("8_sjvm8")]
+
+[node name="UI" parent="." instance=ExtResource("9_wbg2t")]
+
+[node name="Win" parent="." instance=ExtResource("11_57o6o")]
+
+[node name="Start" parent="." instance=ExtResource("11_2l75o")]
+
+[connection signal="Retry" from="GameOver" to="." method="_on_game_over_retry"]
+[connection signal="Start" from="Start" to="." method="_on_start_start"]

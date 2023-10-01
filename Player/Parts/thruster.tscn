@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://k5f0bs7jrrsk"]
+
+[ext_resource type="Script" path="res://Player/Parts/Part.gd" id="1_4ug4c"]
+[ext_resource type="Texture2D" uid="uid://dlam3ne013ji6" path="res://Assets/sprites.png" id="2_s0ds2"]
+[ext_resource type="AudioStream" uid="uid://bedxhxa28gs0l" path="res://Assets/pew.ogg" id="3_u7x5l"]
+[ext_resource type="AudioStream" uid="uid://cpdfqriol2crx" path="res://Assets/explosion2.ogg" id="4_7dsmc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hscte"]
+radius = 35.0
+
+[node name="Part" type="Area2D" groups=["part"]]
+script = ExtResource("1_4ug4c")
+speed = 500
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7, 15)
+texture = ExtResource("2_s0ds2")
+region_enabled = true
+region_rect = Rect2(512, 0, 128, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 6)
+shape = SubResource("CircleShape2D_hscte")
+
+[node name="ProjectileSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_u7x5l")
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7dsmc")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

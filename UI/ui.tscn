@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://crpp4noxy2wtk"]
+
+[ext_resource type="FontFile" uid="uid://cqf1rox1af8ha" path="res://Assets/Bombing.ttf" id="1_qhmou"]
+[ext_resource type="Script" path="res://UI/ui.gd" id="1_wpg1x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tppxa"]
+font = ExtResource("1_qhmou")
+font_size = 50
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_wpg1x")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 16.0
+offset_top = 19.0
+offset_right = 224.0
+offset_bottom = 131.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Wave" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wave: 1 / 10"
+label_settings = SubResource("LabelSettings_tppxa")
+
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_tppxa")

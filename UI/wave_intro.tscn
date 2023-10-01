@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0wn4vybnqpn8"]
+
+[ext_resource type="Script" path="res://Levels/WaveIntro.gd" id="1_6pqpb"]
+[ext_resource type="FontFile" uid="uid://cqf1rox1af8ha" path="res://Assets/Bombing.ttf" id="2_c6nku"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l1uko"]
+font = ExtResource("2_c6nku")
+font_size = 50
+
+[node name="WaveIntro" type="CanvasLayer"]
+script = ExtResource("1_6pqpb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 344.0
+offset_top = 179.0
+offset_right = 844.0
+offset_bottom = 233.0
+text = "Hold onto your butts"
+label_settings = SubResource("LabelSettings_l1uko")
+horizontal_alignment = 1

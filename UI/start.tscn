@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b21ga657vm8nl"]
+
+[ext_resource type="Script" path="res://UI/start.gd" id="1_k0c0o"]
+[ext_resource type="FontFile" uid="uid://cqf1rox1af8ha" path="res://Assets/Bombing.ttf" id="2_revr8"]
+
+[node name="Start" type="CanvasLayer"]
+script = ExtResource("1_k0c0o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_revr8")
+theme_override_font_sizes/font_size = 75
+text = "Build a ship. Shoot stuff. Rock n roll!"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_revr8")
+theme_override_font_sizes/font_size = 40
+text = "W - Forward
+A/D - Turn
+Space - Fire
+Mouse - Drag parts onto your ship"
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_revr8")
+theme_override_font_sizes/font_size = 50
+text = "Let's Rock"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

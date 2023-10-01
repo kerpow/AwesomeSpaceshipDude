@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://djsgohok664hd"]
+
+[ext_resource type="Script" path="res://Levels/Enemy.gd" id="1_6t3rn"]
+[ext_resource type="PackedScene" uid="uid://cvyg51y2qpie2" path="res://Player/Parts/enemy_laser_blast.tscn" id="2_ol21v"]
+[ext_resource type="Texture2D" uid="uid://dlam3ne013ji6" path="res://Assets/sprites.png" id="3_tw20k"]
+[ext_resource type="AudioStream" uid="uid://cpdfqriol2crx" path="res://Assets/explosion2.ogg" id="4_er5ra"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxnlv"]
+radius = 85.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wchh"]
+radius = 145.031
+
+[node name="Enemy" type="RigidBody2D" groups=["enemy"]]
+gravity_scale = 0.0
+script = ExtResource("1_6t3rn")
+projectile = ExtResource("2_ol21v")
+speed = 5
+fireDistance = 1000
+runDistance = 800
+health = 5
+fireRate = 2.0
+
+[node name="Sprites" type="Sprite2D" parent="."]
+position = Vector2(4, -5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_tw20k")
+region_enabled = true
+region_rect = Rect2(0, 128, 128, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pxnlv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7wchh")
+
+[node name="Turret" type="Node2D" parent="."]
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_er5ra")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://32u71t15ojok"]
+
+[ext_resource type="Script" path="res://Levels/Notice.gd" id="1_m4vn4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bu42p"]
+font_size = 50
+
+[node name="Notice" type="Node2D"]
+script = ExtResource("1_m4vn4")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Label" type="Label" parent="CanvasModulate"]
+offset_left = 151.0
+offset_top = -66.0
+offset_right = 411.0
+offset_bottom = 150.0
+text = "Part Name
+Speed +1
+Health +1"
+label_settings = SubResource("LabelSettings_bu42p")
